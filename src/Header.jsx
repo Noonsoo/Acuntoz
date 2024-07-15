@@ -6,7 +6,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 function Header() {
   return (
     <div>
-      <div className="flex justify-between px-5 pt-4 pb-24 bg-customBrown text-white">
+      <div className="flex justify-between px-5 pt-4 pb-8 bg-customBrown text-white">
         <div class="flex  items-center">
           <IoIosSearch />
           <input

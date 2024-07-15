@@ -19,7 +19,7 @@ function Form() {
           Personal Details
         </button>
         <button
-          className={`${
+          className={`px-4  py-2 text-sm focus:outline-none ${
             activeSection === "company"
               ? "bg-customBrown rounded-sm"
               : "bg-white"
@@ -40,7 +40,7 @@ function Form() {
       {activeSection === "personal" && (
         <>
           <div className="grid  grid-cols-2 justify-items-center items-center px-16 pt-3 gap-4">
-            <div className="grid grid-rows-4">
+            <div className="grid grid-rows-5">
               <div className="flex justify-start">
                 <label className="mr-2" htmlFor="firstName">
                   Firstname:
@@ -97,7 +97,7 @@ function Form() {
                 </div>
               </div>
             </div>
-            <div className="grid col-span-1 grid-rows-4">
+            <div className="grid col-span-1 ">
               <div className="flex">
                 <label
                   className="mr-2 w-[120px] text-right"
@@ -126,7 +126,7 @@ function Form() {
                 </p>
                 <label
                   htmlFor="profilePictureInput"
-                  className="mr-2 border border-black border-dotted rounded p-2 cursor-pointer ">
+                  className=" border border-black border-dotted rounded p-2 cursor-pointer ">
                   <div className="flex flex-col">
                     <div className="relative flex items-center justify-center">
                       <img
@@ -153,12 +153,143 @@ function Form() {
                   </div>
                 </label>
               </div>
+              <div className="  flex  justify-end mt-4  text-white text-xs">
+                <button className="bg-customBrown rounded font-bold px-7 py-2">
+                  Update
+                </button>
+              </div>
             </div>
           </div>
-          <div className="  flex  justify-end mr-[70px] mt-4  text-white text-xs">
-            <button className="bg-customBrown rounded  px-5 py-2">
-              Update
-            </button>
+        </>
+      )}
+      {activeSection === "company" && (
+        <>
+          <div className="grid  grid-cols-2 justify-items-center items-center px-16 pt-3 gap-4">
+            <div className="grid grid-rows-5">
+              <div className="flex justify-start">
+                <label className="mr-2 flex-shrink-0" htmlFor="firstName">
+                  Company Name:
+                </label>
+                <input
+                  type="text"
+                  id="firstName"
+                  className="w-full border border-black rounded  mb-4"
+                />
+              </div>
+              <div className="flex">
+                <label className="mr-2" htmlFor="lastName">
+                  Industry:
+                </label>
+                <input
+                  type="text"
+                  id="lastName"
+                  className=" border w-full border-black rounded  mb-4"
+                />
+              </div>
+              <div className="flex">
+                <label
+                  className="mr-2  flex-shrink-0 text-right inline-block"
+                  htmlFor="lastName">
+                  Official Email:
+                </label>
+                <input
+                  type="text"
+                  id="email"
+                  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                  className="w-full border rounded border-black  mb-4"
+                />
+              </div>
+
+              <div className="flex items-center">
+                <label className="mr-2" htmlFor="firstName">
+                  Contact Phone No:
+                </label>
+                <div>
+                  <select
+                    id="countryCode"
+                    className="border-b border-l border-t pb-[0.5px] border-black rounded-l  outline-none">
+                    <option value="+1">+1 (USA)</option>
+                    <option value="+44">+44 (UK)</option>
+                    <option value="+61">+61 (Australia)</option>
+                    {/* Add more country code options as needed */}
+                  </select>
+
+                  <input
+                    type="tel"
+                    id="phoneNumber"
+                    className="border-b border-r border-t border-black rounded-r outline-none"
+                    placeholder="Enter phone number"
+                  />
+                </div>
+              </div>
+              <div className="flex">
+                <label
+                  className="mr-2 w-[90px] text-right inline-block"
+                  htmlFor="lastName">
+                  Fax No:
+                </label>
+                <input
+                  type="text"
+                  id="email"
+                  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                  className="w-full border rounded border-black  mb-4"
+                />
+              </div>
+            </div>
+            <div className="grid grid-rows-5">
+              <div className="flex">
+                <label
+                  className="mr-2 flex-shrink-0 text-right"
+                  htmlFor="firstName">
+                  Street Address:
+                </label>
+                <input
+                  type="text"
+                  id="firstName"
+                  className="w-full border border-black rounded  mb-4"
+                />
+              </div>
+              <div className="flex">
+                <label className="mr-2" htmlFor="lastName">
+                  City:
+                </label>
+                <input
+                  type="text"
+                  id="department"
+                  className="w-full border border-black rounded  mb-4"
+                />
+              </div>
+              <div className="flex">
+                <label className="mr-2" htmlFor="lastName">
+                  State:
+                </label>
+                <input
+                  type="text"
+                  id="department"
+                  className="w-full border border-black rounded  mb-4"
+                />
+              </div>
+              <div className="flex">
+                <label className="mr-2 flex-shrink-0" htmlFor="lastName">
+                  Zip code:
+                </label>
+                <input
+                  type="text"
+                  id="department"
+                  className="w-full border border-black rounded  mb-4"
+                />
+              </div>
+              <div className="flex">
+                <label className="mr-2" htmlFor="lastName">
+                  Country:
+                </label>
+                <input
+                  type="text"
+                  id="department"
+                  className="w-full border border-black rounded  mb-4"
+                />
+              </div>
+            </div>
           </div>
         </>
       )}
